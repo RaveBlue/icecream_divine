@@ -7,8 +7,15 @@ import BlueMint from "../images/BlueMint.png";
 import Cookiescream from "../images/Cookiescream.png";
 import PeanutButter from "../images/PeanutButter.png";
 import Cake from "../images/Cake.png";
-import Steve from "./Steve.jpg";
+//import Steve from "./Steve.jpg";
 //import Cone from "./Cone.png";
+//import Hannah from "./Hannah.jpg";
+import customerone from "./customerone.jpg";
+import customertwo from "./customertwo.jpg";
+import customerthree from "./customerthree.jpg";
+import customerfour from "./customerfour.jpg";
+import customerfive from "./customerfive.jpg";
+import customersix from "./customersix.jpg";
 
 const Home = () => {
   return (
@@ -25,17 +32,17 @@ const Home = () => {
 
         <div className="delivered-tubs">
           <div className="delivered-imgs">
-            <img src={icecream} alt="Customer Photo" />
+            <img src={customerone} alt="Customer Photo" />
 
-            <img src={icecream} alt="Customer Photo" />
+            <img src={customertwo} alt="Customer Photo" />
 
-            <img src={Steve} alt="Customer Photo" />
+            <img src={customerthree} alt="Customer Photo" />
 
-            <img src={icecream} alt="Customer Photo" />
+            <img src={customerfour} alt="Customer Photo" />
 
-            <img src={icecream} alt="Customer Photo" />
+            <img src={customerfive} alt="Customer Photo" />
 
-            <img src={icecream} alt="Customer Photo" />
+            <img src={customersix} alt="Customer Photo" />
           </div>
           <p className="delivered-text">
             <span>150,000+ </span>Ice-cream tubs sold!

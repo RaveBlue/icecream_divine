@@ -4,9 +4,9 @@ import React from "react";
 //import Review from "./components/Review";
 import "./Review.css";
 import Logodivine from "./Logodivine.png";
-//import Ben from "./Ben.jpg";
-//import Dave from "./Dave.jpg";
-//import Hannah from "./Hannah.jpg";
+import Ben from "./Ben.jpg";
+import Dave from "./Dave.jpg";
+import Hannah from "./Hannah.jpg";
 import Steve from "./Steve.jpg";
 import icecream from "./icecream.png";
 
@@ -23,7 +23,7 @@ const Review = () => {
               <img
                 className="testimonial-img"
                 alt="Photo of customer Dave Bryson"
-                src={icecream}
+                src={Dave}
               />
               <blockquote className="testimonial-text">
                 Inexpensive, healthy and great-tasting Ice-Cream. It tastes
@@ -36,7 +36,7 @@ const Review = () => {
               <img
                 className="testimonial-img"
                 alt="Photo of customer Ben Hadley"
-                src={icecream}
+                src={Ben}
               />
               <blockquote className="testimonial-text">
                 The Ice-cream is crazy good. It's amazing!
@@ -60,7 +60,7 @@ const Review = () => {
               <img
                 className="testimonial-img"
                 alt="Photo of customer Hannah Smith"
-                src={icecream}
+                src={Hannah}
               />
               <blockquote className="testimonial-text">
                 I got Divine Ice-cream for the whole family. It's great!
