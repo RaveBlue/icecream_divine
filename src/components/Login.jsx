@@ -1,38 +1,43 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { loginUser } from "../api/index";
 import "./Login.css";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loginMessage, setLoginMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   async function handleLogin(e) {
     e.preventDefault();
 
-    // Simple validation
     if (!username || !password) {
       setLoginMessage("Please fill in all fields");
       return;
     }
 
-    // Demo login (no backend needed)
+    setIsLoading(true);
+    setLoginMessage("");
+
     try {
-      localStorage.setItem("username", username);
+      const data = await loginUser(username, password);
+
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("username", data.user.username);
       localStorage.setItem("isLoggedIn", "true");
 
       alert("Thank you for joining us! Hope you enjoy the Ice-cream!");
 
-      // Clear form
       setUsername("");
       setPassword("");
-      setLoginMessage("");
 
-      // Navigate to products page
       navigate("/Products");
     } catch (error) {
-      setLoginMessage("Login failed. Please try again.");
+      setLoginMessage(error.message || "Login failed. Please try again.");
+    } finally {
+      setIsLoading(false);
     }
   }
 
@@ -51,6 +56,7 @@ const Login = () => {
             placeholder="Username *"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            disabled={isLoading}
           />
 
           <input
@@ -60,18 +66,24 @@ const Login = () => {
             placeholder="Password *"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            disabled={isLoading}
           />
 
           {loginMessage && (
             <div
-              style={{ color: "red", textAlign: "center", fontSize: "14px" }}
+              style={{
+                color: "red",
+                textAlign: "center",
+                fontSize: "14px",
+                marginTop: "10px",
+              }}
             >
               {loginMessage}
             </div>
           )}
 
-          <button className="loginButton" type="submit">
-            Login
+          <button className="loginButton" type="submit" disabled={isLoading}>
+            {isLoading ? "Logging in..." : "Login"}
           </button>
         </form>
       </div>

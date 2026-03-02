@@ -1,3 +1,4 @@
+import { placeOrder } from "../api/index";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Cart.css";
@@ -29,10 +30,36 @@ const Cart = ({ cart, removeFromCart, updateQuantity, clearCart }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleCheckout = (e) => {
+  const handleCheckout = async (e) => {
     e.preventDefault();
-    setOrderPlaced(true);
-    clearCart();
+
+    const token = localStorage.getItem("token");
+    if (!token) {
+      alert("Please login to place an order");
+      navigate("/Login");
+      return;
+    }
+
+    try {
+      const orderData = {
+        cart: cart,
+        total: total,
+        shipping: shipping,
+        name: formData.name,
+        email: formData.email,
+        address: formData.address,
+        city: formData.city,
+        zip: formData.zip,
+      };
+
+      await placeOrder(orderData);
+
+      setOrderPlaced(true);
+      clearCart();
+    } catch (error) {
+      alert("Order failed: " + error.message);
+      console.error(error);
+    }
   };
 
   if (orderPlaced) {

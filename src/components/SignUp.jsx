@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-//import { registerUser } from "../api/index";
+import { registerUser } from "../api/index";
 import "./SignUp.css";
 
 const SignUp = () => {
@@ -23,22 +23,14 @@ const SignUp = () => {
     setSignupMessage("");
 
     try {
-      // Call API
-      const result = await registerUser(username, password, email);
+      const data = await registerUser(username, email, password);
 
-      if (result.token) {
-        localStorage.setItem("token", result.token);
-        localStorage.setItem("username", username);
-      }
+      alert("Thank you for Signing up! Please login.");
 
-      alert("Thank you for Signing up!");
-
-      // Clear form
       setUsername("");
       setPassword("");
       setEmail("");
 
-      // Navigate to login
       navigate("/Login");
     } catch (error) {
       setSignupMessage(error.message || "Signup failed. Please try again.");

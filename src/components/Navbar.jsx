@@ -24,6 +24,9 @@ const Navbar = ({ cartCount }) => {
             <Link to="/Products" className="nav-link">
               Products
             </Link>
+            <Link to="/Orders" className="nav-link">
+              My Orders
+            </Link>
 
             {/* Shopping Cart */}
             <Link to="/Cart" className="cart-link">

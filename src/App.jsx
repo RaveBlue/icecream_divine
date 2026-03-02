@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import ContactUs from "./components/ContactUs";
 import AboutUs from "./components/AboutUs";
 import Review from "./components/Review";
+import Orders from "./components/Orders";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -77,6 +78,7 @@ function App() {
           <Route path="/Review" element={<Review />} />
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/ContactUs" element={<ContactUs />} />
+          <Route path="/Orders" element={<Orders />} />
         </Routes>
       </main>
       <Footer />
