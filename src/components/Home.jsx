@@ -1,18 +1,18 @@
 import React from "react";
 import "./Home.css";
-import icecream from "./icecream.png";
+//import icecream from "./icecream.png";
 import GreenTea from "../images/GreenTea.png";
 import Strawberry from "../images/Strawberry.png";
 import BlueMint from "../images/BlueMint.png";
 import Cookiescream from "../images/Cookiescream.png";
 import PeanutButter from "../images/PeanutButter.png";
 import Cake from "../images/Cake.png";
-import customerone from "./customerone.jpg";
-import customertwo from "./customertwo.jpg";
-import customerthree from "./customerthree.jpg";
-import customerfour from "./customerfour.jpg";
-import customerfive from "./customerfive.jpg";
-import customersix from "./customersix.jpg";
+import customerone from "../customerone.jpg";
+import customertwo from "../customertwo.jpg";
+import customerthree from "../customerthree.jpg";
+import customerfour from "../customerfour.jpg";
+import customerfive from "../customerfive.jpg";
+import customersix from "../customersix.jpg";
 
 const Home = () => {
   return (
