@@ -1,7 +1,6 @@
 import "./AboutUs.css";
 import React from "react";
-import icecream from "./icecream.png";
-import Logodivine from "./Logodivine.png";
+import Logodivine from "../images/Logodivine.png";
 
 const AboutUs = () => {
   return (

@@ -1,14 +1,10 @@
 import React from "react";
-//import { useSelector } from 'react-redux';
-//import { selectReviews } from './features/reviews/reviewsSlice';
-//import Review from "./components/Review";
 import "./Review.css";
-import Logodivine from "./Logodivine.png";
-import Ben from "./Ben.jpg";
-import Dave from "./Dave.jpg";
-import Hannah from "./Hannah.jpg";
-import Steve from "./Steve.jpg";
-import icecream from "./icecream.png";
+import Logodivine from "../images/Logodivine.png";
+import Ben from "../images/Ben.jpg";
+import Dave from "../images/Dave.jpg";
+import Hannah from "../images/Hannah.jpg";
+import Steve from "../images/Steve.jpg";
 
 const Review = () => {
   return (

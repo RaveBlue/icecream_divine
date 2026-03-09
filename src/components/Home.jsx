@@ -1,6 +1,5 @@
 import React from "react";
 import "./Home.css";
-//import icecream from "./icecream.png";
 import GreenTea from "../images/GreenTea.png";
 import Strawberry from "../images/Strawberry.png";
 import BlueMint from "../images/BlueMint.png";

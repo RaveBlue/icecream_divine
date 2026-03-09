@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
-import logo from "./logo.png";
+import logo from "../images/logo.png";
 import "./Navbar.css";
 
 const Navbar = ({ cartCount }) => {
