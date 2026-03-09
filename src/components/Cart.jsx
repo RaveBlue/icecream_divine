@@ -2,7 +2,7 @@ import { placeOrder } from "../api/index";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Cart.css";
-import icecream from "./icecream.png";
+import icecream from "../images/icecream.png";
 
 const Cart = ({ cart, removeFromCart, updateQuantity, clearCart }) => {
   const [isCheckingOut, setIsCheckingOut] = useState(false);
