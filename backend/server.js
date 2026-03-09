@@ -11,8 +11,13 @@ app.use(
       // Allow requests with no origin (like mobile apps or curl)
       if (!origin) return callback(null, true);
 
-      // Allow any localhost origin
+      // Allow localhost for development
       if (origin.startsWith("http://localhost:")) {
+        return callback(null, true);
+      }
+
+      // Allow your Vercel domain
+      if (origin.includes(".vercel.app")) {
         return callback(null, true);
       }
 
@@ -21,7 +26,6 @@ app.use(
     credentials: true,
   })
 );
-app.use(express.json());
 
 // Routes
 app.use("/api/auth", require("./routes/auth"));
