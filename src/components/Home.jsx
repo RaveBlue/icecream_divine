@@ -6,12 +6,12 @@ import BlueMint from "../images/BlueMint.png";
 import Cookiescream from "../images/Cookiescream.png";
 import PeanutButter from "../images/PeanutButter.png";
 import Cake from "../images/Cake.png";
-import customerone from "../customerone.jpg";
-import customertwo from "../customertwo.jpg";
-import customerthree from "../customerthree.jpg";
-import customerfour from "../customerfour.jpg";
-import customerfive from "../customerfive.jpg";
-import customersix from "../customersix.jpg";
+import customerone from "../images/customerone.jpg";
+import customertwo from "../images/customertwo.jpg";
+import customerthree from "../images/customerthree.jpg";
+import customerfour from "../images/customerfour.jpg";
+import customerfive from "../images/customerfive.jpg";
+import customersix from "../images/customersix.jpg";
 
 const Home = () => {
   return (
