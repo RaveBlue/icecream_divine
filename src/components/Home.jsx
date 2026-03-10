@@ -183,9 +183,11 @@ const Home = () => {
         </div>
 
         <div className="container all-recipes">
-          <a className="link3" href="http://localhost:5175/Products">
+          import {Link} from 'react-router-dom'; // Add this at the top if not
+          there // Then change the link to:
+          <Link to="/Products" className="link3">
             See all Ice-Cream Flavors &rarr;
-          </a>
+          </Link>
         </div>
       </section>
 
