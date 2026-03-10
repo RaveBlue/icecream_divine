@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Home.css";
 import GreenTea from "../images/GreenTea.png";
 import Strawberry from "../images/Strawberry.png";
