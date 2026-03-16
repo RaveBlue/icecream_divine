@@ -64,7 +64,7 @@ Installation
 ```
 
 3. **Create `.env` file in backend folder**
-```
+
 
 DB_HOST=localhost
 DB_PORT=5432
@@ -73,6 +73,7 @@ DB_USER=postgres
 DB_PASSWORD=your_password
 JWT_SECRET=your_secret_key
 PORT=5000
+```
 
 4. Set up the database
    createdb icecream_db
@@ -111,6 +112,7 @@ Challenge 1: CORS Configuration
 Problem: Frontend and backend on different domains caused CORS errors preventing API calls.
 Solution: Implemented dynamic CORS configuration in Express to allow requests from both localhost (development) and Vercel domain (production)
 
+```
 app.use(cors({
 origin: function(origin, callback) {
 if (!origin || origin.startsWith('http://localhost:') || origin.includes('.vercel.app')) {
@@ -120,6 +122,7 @@ callback(new Error('Not allowed by CORS'));
 },
 credentials: true,
 }));
+```
 
 Challenge 2: Environment Variables in Vite
 Problem: API URL wasn't updating in production even after setting environment variables.
@@ -132,10 +135,13 @@ Solution: Renamed image folder from Images to images and ensured all imports mat
 Challenge 4: Database Connection in Production
 Problem: Backend couldn't connect to PostgreSQL on Render initially.
 Solution: Updated database configuration to use connectionString with SSL for production:
+
+```
 const pool = new Pool({
 connectionString: process.env.DATABASE_URL,
 ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false
 });
+```
 
 Challenge 5: Image Organization
 Problem: Images scattered across multiple folders caused build errors and broken imports.
@@ -155,17 +161,22 @@ User profile page with order history export
 
 📸 Screenshots
 Home Page
+![Home Page](screenshots/Homepage.png)
 
 Products Page
+![Products Page](screenshots/Productspage1.png)
+![Products Page](screenshots/Productspage2.png)
 
 Shopping Cart
+![Cart](screenshots/Shoppingcart.png)
 
 Order History
+![Shoppingcart](screenshots/Shoppingcart.png)
 
 👤 Author
 Your Name
 GitHub: @RaveBlue
-LinkedIn: Your LinkedIn
+LinkedIn: www.linkedin.com/in/raven-ontiveros21
 
 🙏 Acknowledgments
 
