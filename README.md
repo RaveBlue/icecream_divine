@@ -73,7 +73,7 @@ DB_USER=postgres
 DB_PASSWORD=your_password
 JWT_SECRET=your_secret_key
 PORT=5000
-```
+
 
 4. Set up the database
    createdb icecream_db
@@ -89,6 +89,7 @@ PORT=5000
 
 7.Open your browser
 Navigate to http://localhost:5173
+```
 
 🌐 Deployment
 Backend (Render)
@@ -171,10 +172,10 @@ Shopping Cart
 ![Cart](screenshots/Shoppingcart.png)
 
 Order History
-![Shoppingcart](screenshots/Shoppingcart.png)
+![Order History](screenshots/Orderhistory.png)
 
 👤 Author
-Your Name
+Raven Ontiveros
 GitHub: @RaveBlue
 LinkedIn: www.linkedin.com/in/raven-ontiveros21
 
