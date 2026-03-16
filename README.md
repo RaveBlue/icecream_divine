@@ -52,6 +52,7 @@ Node.js (v14 or higher)
 PostgreSQL (v15 or higher)
 npm or yarn
 
+```
 Installation
 
 1. Clone the repository
@@ -61,7 +62,7 @@ Installation
    cd backend
    npm install
 
-```
+
 
 3. **Create `.env` file in backend folder**
 
