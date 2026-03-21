@@ -3,8 +3,7 @@
 🍦 Divine Ice Cream - Full-Stack E-Commerce Platform
 A modern, full-stack e-commerce web application for selling protein ice cream products. Built with React, Node.js, Express, and PostgreSQL, featuring secure user authentication, shopping cart functionality, and order management.
 
-Live Demo:
-#Screenshot
+Live Demo:https://youtu.be/9u-1m9k7cSU
 
 📋 Table of Contents
 Features
